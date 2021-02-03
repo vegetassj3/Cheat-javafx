@@ -6,6 +6,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.ListIterator;
@@ -17,9 +18,9 @@ import org.jsoup.select.Elements;
 
 public class ChapterScrape {
 
-	public String getChapterFromURL(String url) {
+	public ArrayList<String> getChapterFromURL(String url) {
 		
-		String result="";
+		ArrayList<String> result=new ArrayList<String>();
 		HttpClient  client = HttpClient.newHttpClient();
 		HttpRequest  request = HttpRequest.newBuilder(
 			       URI.create(url))
@@ -38,8 +39,7 @@ public class ChapterScrape {
 				
 				while(iterator.hasNext()) {
 					Element temp=iterator.next();
-					result=result+"\n"+temp.html()+"\n";
-					
+					result.add(temp.html());
 				}
 				
 			}

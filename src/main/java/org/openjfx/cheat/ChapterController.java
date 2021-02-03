@@ -1,7 +1,7 @@
 package org.openjfx.cheat;
 
 import java.io.IOException;
-
+import java.util.ArrayList;
 
 import data.Chapter;
 import data.Chapters;
@@ -35,8 +35,7 @@ public class ChapterController {
 	@FXML
 	Label title;
 	
-	@FXML
-	Label content;
+	
 	
 	@FXML
 	ScrollPane scroll;
@@ -76,15 +75,22 @@ public class ChapterController {
 			 scroll.setFitToWidth(true);
 			 scroll.setVvalue(0);
 			 title.setWrapText(true);
-			 content.setWrapText(true);
-			 content.prefWidthProperty().bind(vbox.widthProperty());
+			
 			 title.setText(chapters.getTitleOnIndex(index));
 			 chapter.loadChapter(chapters.getUrlOnIndex(index));
-			 content.setText(chapter.getChapterContent());
+			 ArrayList<String> chapterContent = chapter.getChapterContent();
+			 
+			 vbox.getChildren().removeIf(entries-> entries.getId()!=null && entries.getId().equals("content"));
+			 for(String content:chapterContent) {
+				 content="\n"+content;
+				 Label tempLabel= new Label(content);
+				 tempLabel.setId("content");
+				 tempLabel.setWrapText(true);
+				 vbox.getChildren().add(tempLabel);
+			 }
+			 
 		 }
 		
-		 
-		 
 	 }
 	
 }

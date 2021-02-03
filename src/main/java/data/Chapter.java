@@ -1,5 +1,6 @@
 package data;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import Logger.FileLogger;
@@ -11,7 +12,7 @@ public class Chapter {
 	public Chapter(Chapters chapters) {
 	this.chapters=chapters;
 	}
-	private String chapterContent = null;
+	private ArrayList<String> chapterContent = new ArrayList<String>();
 	private int index=0;
 	private ChapterScrape scrape= new ChapterScrape();
 	
@@ -36,12 +37,12 @@ public class Chapter {
 		}
 	}
 	
-	public String getChapterContent() {
+	public ArrayList<String> getChapterContent() {
 		return chapterContent;
 	}
 	
 	
-	public void setChapterContent(String chapterContent) {
+	public void setChapterContent(ArrayList<String> chapterContent) {
 		this.chapterContent=chapterContent;
 	}
 	

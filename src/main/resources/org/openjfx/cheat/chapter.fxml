@@ -34,11 +34,7 @@
             <Font name="Arial" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="content">
-         <font>
-            <Font name="Arial" size="15.0" />
-         </font>
-      </Label>
+      
    </children>
 </VBox>
 </ScrollPane>
