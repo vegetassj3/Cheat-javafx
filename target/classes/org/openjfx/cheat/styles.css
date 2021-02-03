@@ -1,0 +1,24 @@
+
+
+.root *{
+    -fx-background-color: #000000;
+}
+
+.button { 
+   -fx-background-color: red; 
+}
+
+.label, .text-field ,.button{
+	-fx-text-fill: white; 
+}
+
+.text-field{
+	-fx-border-color: green;
+    -fx-border-width: 3;
+    -fx-border-radius:5;
+}
+
+.scroll-bar:vertical .thumb{
+    -fx-background-color:white;
+    -fx-background-radius: 5em;
+}

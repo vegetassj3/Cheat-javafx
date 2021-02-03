@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane  fx:id="scroll"
+ 	maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+ 	xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1"
+ 	fx:controller="org.openjfx.cheat.ChapterController"
+ 	onKeyPressed="#handleOnKeyPressed">
+
+<VBox fx:id="vbox" alignment="TOP_LEFT"  >
+ 
+ 	<padding>
+		<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+	</padding>
+   <children>
+   
+   		<HBox alignment="CENTER">
+   			<Button fx:id="all_chapters" text="All Chapters" onAction="#allChapters"/>
+   			<padding>
+				<Insets bottom="20.0" left="0" right="0" top="20.0" />
+			</padding>
+   		</HBox>
+   
+      <Label fx:id="title">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="content">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>
+</ScrollPane>
