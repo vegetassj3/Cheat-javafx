@@ -12,11 +12,7 @@ public class SecondaryController {
 	 @FXML
 	    private TextField url;
 	 
-	public void initialize() {
-		
-		url.setText("https://www.mtlnovel.com/top-quality-beauty-cultivation-system/");
-			
-	};
+	
 	
 	@FXML
     private void cancel() throws IOException {

@@ -35,8 +35,6 @@ public class ChapterController {
 	@FXML
 	Label title;
 	
-	
-	
 	@FXML
 	ScrollPane scroll;
 	
